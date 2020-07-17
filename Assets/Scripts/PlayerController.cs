@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public float speed;
+
     private Rigidbody rb;
 
     void Start ()
@@ -18,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 
-        rb.AddForce (movement);
+        rb.AddForce (movement * speed);
     }
 
 }
